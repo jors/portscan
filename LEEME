@@ -1,0 +1,36 @@
+Un escaner de puertos ligero (13KB de fuente, 17K de estático binario en 64 bit).
+A very slick (13KB of source, 17KB of 64 bit static binary) port scanner.
+
+Uso
+---
+
+$ ./portscan5
+
+Uso: ./portscan5 hostname|ip [PARAMS]
+
+I.e. to obtain help:
+P.ej. para obtener ayuda:
+   ./portscan5 hostname|ip -h
+
+$ ./portscan5 ip -h
+
+Uso: ./portscan5 hostname|ip [PARAMS]
+
+PARAMS:
+
+-pN:M Establece el rango de puertos entre el cual hacer la
+      busqueda. Donde N es el primero y M el ultimo, siempre en
+      orden ascendente. Incluso un solo puerto debe especificarse
+      como un rango.
+-fN   Modo (syn)flood activado. Cuando acabe de hacer un scan
+      de puertos, permite hacer syn flood a uno de los abiertos,
+      caso de haber alguno. N indica el nivel de severidad del
+      flood, que puede ir de 0 a 9.
+-gN   Establece el intervalo de tiempo entre puertos. El
+      establecido por defecto (250000) esta recomendado
+      para hosts en Internet, mientras que para redes locales
+      puede usarse uno menor (p.ej. 100000). Dependiendo de los
+      tiempo de respuesta, establecer intervalos bajos puede dar
+      falsos positivos.
+-h    Muestra esta breve ayuda.
+

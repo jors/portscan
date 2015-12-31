@@ -1,0 +1,31 @@
+A very slick (13KB of source, 17KB of 64 bit static binary) port scanner.
+
+Usage
+-----
+
+$ ./portscan5
+
+Usage: ./portscan5 hostname|ip [PARAMS]
+
+I.e. to obtain help:
+   ./portscan5 hostname|ip -h
+
+$ ./portscan5 ip -h
+
+Usage: ./portscan5 hostname|ip [PARAMS]
+
+PARAMS:
+
+-pN:M Define the port range to do the scan. N is first port and
+      M is the last, always in ascendant order. Even a single port
+      must be specified as a range.
+-fN   (Syn) flood mode enabled. When the port scan is finished,
+      this option allows you to do a syn flood to one of the found
+      open ports (if there is any). N defines flood severity level,
+      and goes from 0 to 9.
+-gN   Defines the interval time between each port check. The default
+      (250000) is the recommended for scanning Internet hosts. For
+      local network hosts a lower value can be used (in instance, 
+      100000). Stablishing low values can lead to false positives.
+-h    Shows this brief help.
+
